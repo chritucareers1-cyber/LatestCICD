@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dsxg0I4OQ/4=",
+  "dgSpecHash": "1loUPaeO2po=",
   "success": true,
-  "projectFilePath": "C:\\RituStudy\\Azure\\MyWebApiApp\\src\\ProductService\\ProductService.csproj",
+  "projectFilePath": "C:\\RituStudy\\Azure\\MyWebApiApp\\src\\productService\\ProductService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chabh\\.nuget\\packages\\azure.core\\1.54.0\\azure.core.1.54.0.nupkg.sha512",
     "C:\\Users\\chabh\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.5.1\\azure.extensions.aspnetcore.configuration.secrets.1.5.1.nupkg.sha512",

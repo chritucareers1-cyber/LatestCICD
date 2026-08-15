@@ -1522,11 +1522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\RituStudy\\Azure\\MyWebApiApp\\test\\MyNUnitTests\\MyNUnitTests.csproj",
+      "projectUniqueName": "C:\\RituStudy\\Azure\\MyWebApiApp\\src\\test\\MyNUnitTests\\MyNUnitTests.csproj",
       "projectName": "MyNUnitTests",
-      "projectPath": "C:\\RituStudy\\Azure\\MyWebApiApp\\test\\MyNUnitTests\\MyNUnitTests.csproj",
+      "projectPath": "C:\\RituStudy\\Azure\\MyWebApiApp\\src\\test\\MyNUnitTests\\MyNUnitTests.csproj",
       "packagesPath": "C:\\Users\\chabh\\.nuget\\packages\\",
-      "outputPath": "C:\\RituStudy\\Azure\\MyWebApiApp\\test\\MyNUnitTests\\obj\\",
+      "outputPath": "C:\\RituStudy\\Azure\\MyWebApiApp\\src\\test\\MyNUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

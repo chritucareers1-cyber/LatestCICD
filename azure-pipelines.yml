@@ -1,0 +1,40 @@
+trigger:
+- main
+
+pool:
+  name: RituAgent   # Agent pool name
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
+- script: dotnet restore src/productservice/productservice.csproj
+  displayName: 'Restore'
+
+- script: dotnet build src/productservice/productservice.csproj --no-restore
+  displayName: 'Build'
+
+- script: dotnet test test/MyNUnitTests/MyNUnitTests.csproj
+  displayName: 'Test'
+
+- script: dotnet publish src/productservice/productservice.csproj -c Release -o $(Build.ArtifactStagingDirectory)
+  displayName: 'Publish'
+
+# Zip the published output
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/productservice.zip'
+    replaceExistingArchive: true
+
+# Deploy to Azure Web App
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'AzureBatchServiceConnection'   # Service connection name
+    appType: 'webApp'
+    appName: 'DevopsCICDProduct'                       # App Service name
+    package: '$(Build.ArtifactStagingDirectory)/productservice.zip'

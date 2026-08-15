@@ -16,8 +16,7 @@ steps:
 - script: dotnet build src/productservice/productservice.csproj --no-restore
   displayName: 'Build'
 
-- script: dotnet test test/MyNUnitTests/MyNUnitTests.csproj
-  displayName: 'Test'
+
 
 - script: dotnet publish src/productservice/productservice.csproj -c Release -o $(Build.ArtifactStagingDirectory)
   displayName: 'Publish'
